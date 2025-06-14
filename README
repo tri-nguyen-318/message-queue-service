@@ -1,0 +1,69 @@
+This repo is used to define simple message queues
+
+# Basic usage
+
+Use docker to install image rabbitmq
+
+```base
+docker-compose up
+```
+
+# Example 1: Simple message queue
+
+We will focus on two files `producer.js` and `consumer.js`.
+
+Open a terminal to run producer
+
+```
+node producer <optional message>
+```
+
+Open one or more than one terminal to run consumers to listen to the message from the queue
+
+```
+node comsumer
+```
+
+# Example 2: Pub sub model with exchange
+
+In this example, we'll focus on files inside `pubsub` folder
+
+Change dir to pubsub folder when you open a new terminal
+
+```
+cd pubsub
+```
+
+Open a terminal to run producer
+
+```
+node post <optional message>
+```
+
+Open one or more than one terminal to run consumers to listen to the message from the queue
+
+```
+node comsumer
+```
+
+# Example 3: Pubsub model with topic
+
+In this example, we'll focus on files inside `topic` folder
+
+Change dir to topic folder when you open a new terminal
+
+```
+cd topic
+```
+
+Open a terminal to run producer
+
+```
+node send.mail <topic (required)> <optional message>
+```
+
+Open one or more than one terminal to run consumers to listen to the message from the queue
+
+```
+node comsumer <topic (required)>
+```
